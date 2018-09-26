@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 
 class AnimalCard extends Component {
   render() {
+    const {animalCard, adoptAnimal, releaseAnimal} = this.props
     return (
-      <div>
-        AnimalCard
+      <div className="animal-card">
+        <h1>{animalCard.name}</h1>
+        <img src={animalCard.img} alt= ""/>
+          <h2>{animalCard.type}</h2>
+          <h3>{animalCard.sex}</h3>
+          {adoptAnimal
+            ?
+            <button onClick={() => adoptAnimal(animalCard)}>Adopt Me</button>
+            :
+            <button onClick={() => releaseAnimal(animalCard)}>Release Me</button>
+          }
+          <br/>
       </div>
     );
   }
