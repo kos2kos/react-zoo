@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class AnimalCard extends Component {
-  console.log("Permanet 🌮 for Eric");
   render() {
+    console.log("Permanet 🌮 for Eric");
     const {animalCard, adoptAnimal, releaseAnimal} = this.props
     return (
       <div className="animal-card">
